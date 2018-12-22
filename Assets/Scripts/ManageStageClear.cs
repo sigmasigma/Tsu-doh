@@ -17,10 +17,15 @@ public class ManageStageClear : MonoBehaviour {
 	void Update () {
 		if(isClear){
 			Text mainText = GameObject.Find("countdown_text").GetComponent<Text>();
-			mainText.fontSize = 90;
-			mainText.text = "ステージクリア！\n" +escapedNumber.ToString()+"人救出！";
+			mainText.fontSize = 80;
 			Text subText = GameObject.Find("restart").GetComponent<Text>();
 			subText.text = "Press Space key";
+			if(escapedNumber < 4){
+				mainText.text = escapedNumber.ToString()+"人救出！";
+			}else{
+				mainText.text = "ステージクリア！\n" +escapedNumber.ToString()+"人救出！";
+			}
+			
 			if (Input.GetKey("space")) {
 				isClear = false;
 				Scene loadScene = SceneManager.GetActiveScene();

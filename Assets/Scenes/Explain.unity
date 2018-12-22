@@ -330,7 +330,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30C4\u30C9\u30A6 -Tsudoh- \u3068\u306F\n"
+  m_Text: "\u6D25\u9053 -Tsudoh- \u3068\u306F\n"
 --- !u!222 &801448199
 CanvasRenderer:
   m_ObjectHideFlags: 0
