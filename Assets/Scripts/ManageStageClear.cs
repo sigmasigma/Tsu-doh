@@ -17,7 +17,7 @@ public class ManageStageClear : MonoBehaviour {
 	void Update () {
 		if(isClear){
 			Text mainText = GameObject.Find("countdown_text").GetComponent<Text>();
-			mainText.fontSize = 100;
+			mainText.fontSize = 90;
 			mainText.text = "ステージクリア！\n" +escapedNumber.ToString()+"人救出！";
 			Text subText = GameObject.Find("restart").GetComponent<Text>();
 			subText.text = "Press Space key";
