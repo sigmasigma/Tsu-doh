@@ -18,7 +18,7 @@ public class CollisionPlayer : MonoBehaviour {
 			Destroy(gameObject);
 		}
 		if(c.gameObject.CompareTag("goal")){
-			GameObject.Find("GameManager").GetComponent<ManageStage1Clear>().StageClear();
+			GameObject.Find("GameManager").GetComponent<ManageStageClear>().StageClear();
 		}
 	}
 }

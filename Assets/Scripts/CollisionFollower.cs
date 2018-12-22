@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyFollower : MonoBehaviour {
+public class CollisionFollower : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +16,10 @@ public class DestroyFollower : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D c){
 		if(c.gameObject.CompareTag("wave")){
-			
+			Destroy(gameObject);
+		}
+		if(c.gameObject.CompareTag("goal")){
+			GameObject.Find("GameManager").GetComponent<ManageStageClear>().AddEscaper();
 			Destroy(gameObject);
 		}
 	}
